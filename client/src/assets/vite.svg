@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" x1="40" y1="40" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#ECFDF5"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Card Background -->
+  <rect width="200" height="200" rx="48" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Plate Rim -->
+  <circle cx="100" cy="100" r="64" fill="url(#plateGrad)" filter="drop-shadow(0 8px 16px rgba(0,0,0,0.15))"/>
+  <circle cx="100" cy="100" r="48" stroke="#10B981" stroke-width="4" stroke-dasharray="6 4" opacity="0.4"/>
+  
+  <!-- Sharing Heart / Fork & Spoon Center Motif -->
+  <path d="M100 72C92 62 76 66 76 80C76 96 100 114 100 114C100 114 124 96 124 80C124 66 108 62 100 72Z" fill="#047857"/>
+  
+  <!-- Hands / Support Arc -->
+  <path d="M68 128C76 138 88 144 100 144C112 144 124 138 132 128" stroke="#047857" stroke-width="6" stroke-linecap="round"/>
+</svg>

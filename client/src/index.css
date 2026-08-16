@@ -1,0 +1,85 @@
+/* ─── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ─── Tailwind Layers ──────────────────────────────────────────────────────── */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ─────────────────────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-gray-50 text-gray-800 font-sans antialiased;
+    min-height: 100dvh;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-gray-300 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-gray-400; }
+}
+
+/* ─── Components ───────────────────────────────────────────────────────────── */
+@layer components {
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2
+           text-sm font-medium transition-all duration-150 focus-visible:outline-none
+           focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50
+           disabled:cursor-not-allowed select-none;
+  }
+  .btn-primary {
+    @apply btn bg-brand-700 text-white hover:bg-brand-800
+           focus-visible:ring-brand-600 shadow-sm active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply btn bg-white text-gray-700 border border-gray-200
+           hover:bg-gray-50 focus-visible:ring-gray-300 shadow-sm active:scale-[0.98];
+  }
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700
+           focus-visible:ring-red-500 shadow-sm active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply btn text-gray-600 hover:bg-gray-100 focus-visible:ring-gray-300;
+  }
+
+  /* Inputs */
+  .input {
+    @apply w-full rounded-lg border border-gray-200 bg-white px-3.5 py-2.5
+           text-sm text-gray-900 placeholder:text-gray-400 transition-colors
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+           disabled:bg-gray-50 disabled:cursor-not-allowed;
+  }
+  .label { @apply block text-sm font-medium text-gray-700 mb-1.5; }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 shadow-card
+           transition-shadow duration-200 hover:shadow-card-hover;
+  }
+
+  /* Status Badges */
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  .badge-available  { @apply badge bg-brand-100 text-brand-800; }
+  .badge-reserved   { @apply badge bg-amber-100 text-amber-800; }
+  .badge-donated    { @apply badge bg-gray-100 text-gray-600; }
+  .badge-expired    { @apply badge bg-red-100 text-red-700; }
+  .badge-pending    { @apply badge bg-blue-100 text-blue-800; }
+  .badge-accepted   { @apply badge bg-brand-100 text-brand-800; }
+  .badge-rejected   { @apply badge bg-red-100 text-red-700; }
+  .badge-completed  { @apply badge bg-purple-100 text-purple-800; }
+  .badge-delivered  { @apply badge bg-brand-100 text-brand-700; }
+
+  /* Page helpers */
+  .page-header { @apply mb-6; }
+  .page-title  { @apply text-2xl font-semibold text-gray-900; }
+  .page-sub    { @apply text-sm text-gray-500 mt-0.5; }
+
+  /* Form group */
+  .form-group { @apply flex flex-col gap-1.5 mb-4; }
+}

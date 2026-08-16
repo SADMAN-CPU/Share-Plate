@@ -1,0 +1,18 @@
+<svg width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="200" rx="45" fill="#F0FDF4"/>
+
+  <!-- Top Left: Light Green Curve -->
+  <path d="M 100 40 C 66.86 40 40 66.86 40 100 L 100 100 Z" fill="#4ADE80"/>
+
+  <!-- Top Right: Mid Green Ring -->
+  <circle cx="145" cy="60" r="25" fill="#16A34A"/>
+  <circle cx="145" cy="60" r="10" fill="#F0FDF4"/>
+
+  <!-- Bottom Right: Dark Green Curve -->
+  <path d="M 100 100 L 160 100 C 160 133.14 133.14 160 100 160 Z" fill="#14532D"/>
+
+  <!-- Bottom Left: Standard Green Ring -->
+  <circle cx="55" cy="140" r="25" fill="#15803D"/>
+  <circle cx="55" cy="140" r="10" fill="#F0FDF4"/>
+</svg>
