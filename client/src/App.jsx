@@ -1,3 +1,6 @@
+import { Routes, Route } from 'react-router-dom';
+import ProtectedRoute from './components/ProtectedRoute';
+import DashboardLayout from './components/layout/DashboardLayout';
 
 import Landing   from './pages/public/Landing';
 import Login     from './pages/public/Login';
@@ -14,7 +17,6 @@ import VolunteerTasks from './pages/volunteer/VolunteerTasks';
 
 /* Admin pages */
 import AdminPanel from './pages/admin/AdminPanel';
- 
 
 function NotFound() {
   return (
@@ -43,7 +45,6 @@ export default function App() {
           {/* ── Donor ──────────────────────────────────────────────── */}
           <Route element={<ProtectedRoute allowedRoles={['donor']} />}>
             <Route path="/donor/dashboard" element={<DonorDashboard />} />
-            {/* Placeholder routes — fill in as phases progress */}
             <Route path="/donor/listings"  element={<div className="page-title">My Listings — coming soon</div>} />
             <Route path="/donor/requests"  element={<div className="page-title">Incoming Requests — coming soon</div>} />
           </Route>
